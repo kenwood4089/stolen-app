@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import "./App.css"
 import About from "./components/About"
 import Home from "./components/Home"
-import Nav from "./components/Nav"
+import NavigationBar from "./components/NavigationBar"
 import Contacts from "./components/Contacts"
 import PostList from "./components/PostList"
 import Posts from "./components/Posts"
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       Nanakaw Ba App
       <Router>
-        <Nav />
+        <NavigationBar />
 
         <Routes>
           <Route path="/" element={<Home />} />
