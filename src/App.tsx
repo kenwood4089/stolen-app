@@ -1,10 +1,29 @@
-import { useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import "./App.css"
+import About from "./components/About"
+import Home from "./components/Home"
+import Nav from "./components/Nav"
+import Contacts from "./components/Contacts"
+import PostList from "./components/PostList"
+import Posts from "./components/Posts"
 
 function App() {
-  return <div className="App">Nanakaw Ba App</div>
+  return (
+    <div className="App">
+      Nanakaw Ba App
+      <Router>
+        <Nav />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contacts />} />
+          <Route path="posts" element={<Posts />} />
+          <Route path="postlist" element={<PostList />} />
+        </Routes>
+      </Router>
+    </div>
+  )
 }
 
 export default App
